@@ -14,3 +14,9 @@ module "s3_cloudtrail" {
 
   force_destroy = true
 }
+
+module "cloudtrail" {
+  source         = "git::https://github.com/tmknom/terraform-aws-cloudtrail.git?ref=tags/1.2.0"
+  name           = "default-trail"
+  s3_bucket_name = "${module.s3_cloudtrail.s3_bucket_id}"
+}

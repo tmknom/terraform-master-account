@@ -37,3 +37,15 @@ output "s3_cloudtrail_bucket_hosted_zone_id" {
 output "s3_cloudtrail_bucket_region" {
   value = "${module.s3_cloudtrail.s3_bucket_region}"
 }
+
+output "cloudtrail_arn" {
+  value = "${module.cloudtrail.cloudtrail_arn}"
+}
+
+output "cloudtrail_name" {
+  value = "${module.cloudtrail.cloudtrail_name}"
+}
+
+output "cloudtrail_home_region" {
+  value = "${module.cloudtrail.cloudtrail_home_region}"
+}
