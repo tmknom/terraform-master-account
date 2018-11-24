@@ -3,15 +3,6 @@
 [![CircleCI](https://circleci.com/gh/tmknom/terraform-master-account.svg?style=svg)](https://circleci.com/gh/tmknom/terraform-master-account)
 [![License](https://img.shields.io/github/license/tmknom/terraform-master-account.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Terraform template for AWS Account.
-
-## Usage
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/tmknom/terraform-master-account/master/install | sh -s terraform-aws-account
-cd terraform-aws-account && make install
-```
-
 ## Development
 
 ### Requirements
