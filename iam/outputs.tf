@@ -1,3 +1,15 @@
+output "admin_iam_user_arn" {
+  value = "${aws_iam_user.admin.arn}"
+}
+
+output "admin_iam_user_name" {
+  value = "${aws_iam_user.admin.name}"
+}
+
+output "admin_iam_user_unique_id" {
+  value = "${aws_iam_user.admin.unique_id}"
+}
+
 output "admin_iam_group_name" {
   value = "${module.admin_iam_group.iam_group_name}"
 }
