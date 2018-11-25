@@ -17,3 +17,27 @@ output "organizations_organization_master_account_email" {
 output "organizations_organization_master_account_id" {
   value = "${aws_organizations_organization.default.master_account_id}"
 }
+
+output "admin_organizations_policy_id" {
+  value = "${module.admin_organizations_policy.organizations_policy_id}"
+}
+
+output "admin_organizations_policy_arn" {
+  value = "${module.admin_organizations_policy.organizations_policy_arn}"
+}
+
+output "service_organizations_policy_id" {
+  value = "${module.service_organizations_policy.organizations_policy_id}"
+}
+
+output "service_organizations_policy_arn" {
+  value = "${module.service_organizations_policy.organizations_policy_arn}"
+}
+
+output "sandbox_organizations_policy_id" {
+  value = "${module.sandbox_organizations_policy.organizations_policy_id}"
+}
+
+output "sandbox_organizations_policy_arn" {
+  value = "${module.sandbox_organizations_policy.organizations_policy_arn}"
+}
