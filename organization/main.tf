@@ -3,6 +3,10 @@ resource "aws_organizations_organization" "default" {
 }
 
 # Service control policy
+#
+# NOTE: Create Organizational Units by AWS Management Console or AWS CLI in advance.
+#       Because, Terraform does not implement Organizational Unit resources (as of November 2018).
+#       See: https://github.com/terraform-providers/terraform-provider-aws/pull/4207
 module "admin_organizations_policy" {
   source    = "git::https://github.com/tmknom/terraform-aws-organizations-policy.git?ref=tags/1.0.0"
   name      = "admin"
