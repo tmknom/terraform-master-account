@@ -18,6 +18,18 @@ output "organizations_organization_master_account_id" {
   value = "${aws_organizations_organization.default.master_account_id}"
 }
 
+output "admin_organizational_unit_id" {
+  value = "${data.aws_ssm_parameter.admin_organizational_unit_id.value}"
+}
+
+output "service_organizational_unit_id" {
+  value = "${data.aws_ssm_parameter.service_organizational_unit_id.value}"
+}
+
+output "sandbox_organizational_unit_id" {
+  value = "${data.aws_ssm_parameter.sandbox_organizational_unit_id.value}"
+}
+
 output "admin_organizations_policy_id" {
   value = "${module.admin_organizations_policy.organizations_policy_id}"
 }
