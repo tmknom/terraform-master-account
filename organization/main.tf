@@ -60,7 +60,7 @@ data "aws_ssm_parameter" "uninitialized_organizational_unit_id" {
 }
 
 locals {
-  path = "/organization/organizational_unit"
+  path = "/organization/organizational_unit_id"
 
   admin_organizational_unit_id   = "${data.aws_ssm_parameter.admin_organizational_unit_id.value}"
   service_organizational_unit_id = "${data.aws_ssm_parameter.service_organizational_unit_id.value}"
