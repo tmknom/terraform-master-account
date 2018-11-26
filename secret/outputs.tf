@@ -57,3 +57,23 @@ output "sandbox_organizational_unit_id_type" {
 output "sandbox_organizational_unit_id_value" {
   value = "${module.sandbox_organizational_unit_id.ssm_parameter_value}"
 }
+
+output "uninitialized_organizational_unit_id_arn" {
+  value = "${module.uninitialized_organizational_unit_id.ssm_parameter_arn}"
+}
+
+output "uninitialized_organizational_unit_id_name" {
+  value = "${module.uninitialized_organizational_unit_id.ssm_parameter_name}"
+}
+
+output "uninitialized_organizational_unit_id_description" {
+  value = "${module.uninitialized_organizational_unit_id.ssm_parameter_description}"
+}
+
+output "uninitialized_organizational_unit_id_type" {
+  value = "${module.uninitialized_organizational_unit_id.ssm_parameter_type}"
+}
+
+output "uninitialized_organizational_unit_id_value" {
+  value = "${module.uninitialized_organizational_unit_id.ssm_parameter_value}"
+}
