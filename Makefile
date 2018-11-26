@@ -6,11 +6,24 @@ TERRAFORM_VERSION := 0.11.10
 	curl -sSL https://raw.githubusercontent.com/tmknom/template-terraform-aws-account/master/Makefile.terraform -o .Makefile.terraform
 
 # Constant definitions
+ACCOUNT_DIR := ./account
 AUDIT_DIR := ./audit
 IAM_DIR := ./iam
 MONITORING_DIR := ./monitoring
 ORGANIZATION_DIR := ./organization
 SECRET_DIR := ./secret
+
+
+# account
+terraform-plan-account: ## Run terraform plan account
+	$(call terraform,${ACCOUNT_DIR},init)
+	$(call terraform,${ACCOUNT_DIR},plan) | tee -a /dev/stderr | docker run --rm -i tmknom/terraform-landscape
+
+terraform-apply-account: ## Run terraform apply account
+	$(call terraform,${ACCOUNT_DIR},apply)
+
+terraform-destroy-account: ## Run terraform destroy account
+	$(call terraform,${ACCOUNT_DIR},destroy)
 
 
 # audit

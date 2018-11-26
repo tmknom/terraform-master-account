@@ -34,16 +34,19 @@ format                         Format code
 help                           Show help
 install                        Install requirements
 lint                           Lint code
+terraform-apply-account        Run terraform apply account
 terraform-apply-audit          Run terraform apply audit
 terraform-apply-iam            Run terraform apply iam
 terraform-apply-monitoring     Run terraform apply monitoring
 terraform-apply-organization   Run terraform apply organization
 terraform-apply-secret         Run terraform apply secret
+terraform-destroy-account      Run terraform destroy account
 terraform-destroy-audit        Run terraform destroy audit
 terraform-destroy-iam          Run terraform destroy iam
 terraform-destroy-monitoring   Run terraform destroy monitoring
 terraform-destroy-organization Run terraform destroy organization
 terraform-destroy-secret       Run terraform destroy secret
+terraform-plan-account         Run terraform plan account
 terraform-plan-audit           Run terraform plan audit
 terraform-plan-iam             Run terraform plan iam
 terraform-plan-monitoring      Run terraform plan monitoring
