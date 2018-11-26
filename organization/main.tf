@@ -10,7 +10,7 @@ resource "aws_organizations_organization" "default" {
 module "admin_organizations_policy" {
   source    = "git::https://github.com/tmknom/terraform-aws-organizations-policy.git?ref=tags/1.0.0"
   name      = "admin"
-  target_id = "${data.aws_ssm_parameter.admin_organizational_unit_id.value}"
+  target_id = "${local.admin_organizational_unit_id}"
 
   deny_actions = [
     "cloudtrail:StopLogging",
@@ -22,7 +22,7 @@ module "admin_organizations_policy" {
 module "service_organizations_policy" {
   source    = "git::https://github.com/tmknom/terraform-aws-organizations-policy.git?ref=tags/1.0.0"
   name      = "service"
-  target_id = "${data.aws_ssm_parameter.service_organizational_unit_id.value}"
+  target_id = "${local.service_organizational_unit_id}"
 
   deny_actions = [
     "cloudtrail:StopLogging",
@@ -34,7 +34,7 @@ module "service_organizations_policy" {
 module "sandbox_organizations_policy" {
   source    = "git::https://github.com/tmknom/terraform-aws-organizations-policy.git?ref=tags/1.0.0"
   name      = "sandbox"
-  target_id = "${data.aws_ssm_parameter.sandbox_organizational_unit_id.value}"
+  target_id = "${local.sandbox_organizational_unit_id}"
 
   deny_actions = [
     "cloudtrail:StopLogging",
