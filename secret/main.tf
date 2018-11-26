@@ -24,7 +24,7 @@ module "uninitialized_organizational_unit_id" {
 }
 
 locals {
-  path = "/organization/organizational_unit"
+  path = "/organization/organizational_unit_id"
 
   # If Organizational Unit was not created, this value is set.
   uninitialized_rganizational_unit_id = "UNINITIALIZED"
