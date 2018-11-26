@@ -77,3 +77,43 @@ output "uninitialized_organizational_unit_id_type" {
 output "uninitialized_organizational_unit_id_value" {
   value = "${module.uninitialized_organizational_unit_id.ssm_parameter_value}"
 }
+
+output "operation_email_address_arn" {
+  value = "${module.operation_email_address.ssm_parameter_arn}"
+}
+
+output "operation_email_address_name" {
+  value = "${module.operation_email_address.ssm_parameter_name}"
+}
+
+output "operation_email_address_description" {
+  value = "${module.operation_email_address.ssm_parameter_description}"
+}
+
+output "operation_email_address_type" {
+  value = "${module.operation_email_address.ssm_parameter_type}"
+}
+
+output "operation_email_address_value" {
+  value = "${module.operation_email_address.ssm_parameter_value}"
+}
+
+output "uninitialized_email_address_arn" {
+  value = "${module.uninitialized_email_address.ssm_parameter_arn}"
+}
+
+output "uninitialized_email_address_name" {
+  value = "${module.uninitialized_email_address.ssm_parameter_name}"
+}
+
+output "uninitialized_email_address_description" {
+  value = "${module.uninitialized_email_address.ssm_parameter_description}"
+}
+
+output "uninitialized_email_address_type" {
+  value = "${module.uninitialized_email_address.ssm_parameter_type}"
+}
+
+output "uninitialized_email_address_value" {
+  value = "${module.uninitialized_email_address.ssm_parameter_value}"
+}
